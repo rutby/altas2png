@@ -31,7 +31,7 @@ def _parse(filePath, fileName):
         if sourceAtlas.tell() == total:
             break
         
-        match1 = re.match(r'.*\.png', line)
+        match1 = re.match(r'.*\.[png|jpg]', line)
         if match1:
             pngFile = os.path.join(root, line)
             sourceImage = Image.open(pngFile)
